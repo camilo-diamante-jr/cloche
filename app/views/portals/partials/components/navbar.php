@@ -9,6 +9,9 @@
 
 	<!-- Right navbar links -->
 	<ul id="notifications" class="navbar-nav ms-auto">
+		<li class="nav-item">
+			<a id="currentTime" class="nav-link"></a>
+		</li>
 		<!-- Notifications Dropdown Menu -->
 		<li class="nav-item dropdown">
 			<a class="nav-link" data-bs-toggle="dropdown" href="#">

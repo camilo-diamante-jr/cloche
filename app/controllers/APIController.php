@@ -4,13 +4,13 @@ require_once '../core/Controller.php';
 
 class APIController extends Controller
 {
-    private $sectionModel;
+    private $scheduleModel;
 
     public function __construct($pdo)
     {
 
         parent::__construct($pdo);
-        $this->sectionModel = $this->loadModel("SectionModel");
+        $this->scheduleModel = $this->loadModel("ScheduleModel");
     }
 
     public function getSectionById()
@@ -18,5 +18,11 @@ class APIController extends Controller
         require_once 'API/api-section.php';
     }
 
-    public function getBellSchedule() {}
+    public function getBellSchedule()
+    {
+        $schedules = $this->scheduleModel->fetchSchedules();
+
+        header('Content-Type: application/json');
+        echo json_encode(['schedules' => $schedules]);
+    }
 }

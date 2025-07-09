@@ -1,3 +1,3 @@
 <?php
 
-$this->router->addRoute('/api/getSectionById', ['APIController', 'getSectionById']);
+$this->router->addRoute('/api/get-schedules', ['APIController', 'getBellSchedule']);
