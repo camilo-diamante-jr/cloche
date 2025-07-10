@@ -27,12 +27,19 @@ $startTime = min(array_column($schedules, 'time'));
 
             <!-- Schedule Table -->
             <section class="content">
-                <div class="card shadow-sm">
+                <div class="card elevation-4">
                     <header class="card-header bg-white">
-                        <h5 class="mb-0">Scheduled Activities</h5>
-                        <button type="button" class="btn btn-sm btn-primary" id="addSectionBtn">
-                            <i class="fa fa-plus me-1"></i>Assign schedule
-                        </button>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Scheduled Activities</h5>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-dark">Export</button>
+                                <button type="button" class="btn btn-sm btn-primary" id="addSectionBtn">
+                                    <i class="fa fa-plus me-1"></i>Create
+                                </button>
+                                <button type="button" class="btn btn-sm btn-success">Import</button>
+
+                            </div>
+                        </div>
                     </header>
                     <div class="card-body">
                         <table id="courseTable" class="table table-bordered table-striped">
@@ -40,6 +47,9 @@ $startTime = min(array_column($schedules, 'time'));
                                 <tr>
                                     <th>No.</th>
                                     <th>Time</th>
+                                    <th>Duration </th>
+                                    <th>Counts</th>
+                                    <th>Gap</th>
                                     <th>Activity</th>
                                 </tr>
                             </thead>
@@ -48,15 +58,20 @@ $startTime = min(array_column($schedules, 'time'));
                                     <tr>
                                         <td><?= $index + 1 ?></td>
                                         <td><?= $schedule['time'] ?></td>
+                                        <td><?= $schedule['duration'] ?></td>
+                                        <td><?= $schedule['counts'] ?></td>
+                                        <td><?= $schedule['gap'] ?></td>
                                         <td><?= $schedule['activity'] ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-
                         <small class="text-muted mt-3 d-block">
-                            <em>Note: System rings automatically based on the scheduled time.</em>
+                            <em>Note: Schedule durations are set in seconds.<br>
+                                Time format follows the 24-hour format. The system rings automatically based on the scheduled time.</em>
                         </small>
+
+
                     </div>
                 </div>
             </section>

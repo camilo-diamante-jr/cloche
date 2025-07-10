@@ -11,7 +11,7 @@ function loadBellInitialization() {
 	const seconds = now.getSeconds().toString().padStart(2, "0");
 
 	const currentTime = `${hours}:${minutes}:${seconds}`;
-	clock.text(`Current Time: ${currentTime}`);
+	clock.html(`<i class="fas fa-clock"></i> ${currentTime}`);
 	triggerBell(currentTime);
 }
 

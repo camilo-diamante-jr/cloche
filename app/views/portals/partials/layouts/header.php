@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-mini sidebar-collapse sidebar-closed">
     <main class="wrapper">
 
         <?php

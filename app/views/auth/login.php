@@ -19,15 +19,17 @@
 
 </head>
 
-<body>
+<body class="bg-light">
     <main class="wrapper">
         <section class="content">
             <div class="container-fluid d-flex align-items-center justify-content-center vh-100">
                 <div class="w-100 col-md-4 m-auto">
-                    <div class="card">
+                    <div class="card bg-navy">
                         <form id="loginSubmitForm">
                             <div class="card-body">
-                                <h5 class="text-center py-2">CLOCHE</h5>
+                                <figure>
+                                    <img src="/assets/images/logo/cloche-logo-no-bg.png" class="img-fluid" width="75" alt="">
+                                </figure>
 
                                 <div class="form-group">
                                     <!-- <label for="exampleInputEmail1">Email address</label> -->
@@ -44,7 +46,7 @@
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn bg-teal w-100 mt-3">LOG IN</button>
+                                <button type="submit" class="btn btn-warning w-100 mt-3">LOG IN</button>
                             </div>
                         </form>
                     </div>
