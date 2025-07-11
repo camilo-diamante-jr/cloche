@@ -45,7 +45,7 @@
 
                 <!-- Course Management -->
                 <li class="nav-item">
-                    <a href="/admin/sections" class="nav-link">
+                    <a href="/admin/activities" class="nav-link">
                         <i class="nav-icon fas fa-clipboard-list"></i>
                         <p>Activities</p>
                     </a>

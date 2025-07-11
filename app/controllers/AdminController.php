@@ -47,4 +47,16 @@ class AdminController extends Controller
 
     METHODS  TO VIEW ACTIVIIES
     */
+
+    public function viewActivities()
+    {
+
+        $schedules = $this->scheduleModel->fetchSchedules();
+        $data = [
+            'contentHeaderTitle' => 'Schedules',
+            'breadcrumbActiveItem' => 'Schedules',
+            'schedules' => $schedules
+        ];
+        $this->renderView('/portals/admin/management/activities/list-of-activity', $data);
+    }
 }

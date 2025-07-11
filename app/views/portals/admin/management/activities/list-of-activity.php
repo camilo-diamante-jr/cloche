@@ -23,7 +23,7 @@ $this->renderView('/portals/partials/layouts/header', $data);
                 <div class="card">
                     <header class="card-header bg-light shadow-sm">
                         <div class="d-flex align-items-center justify-content-between">
-                            <h5>List of Sections</h5>
+                            <h5>List of Activities</h5>
                             <button type="button" class="btn btn-sm btn-primary" id="addSectionBtn">
                                 <i class="fa fa-plus"></i>
                                 <span>Add Sections</span>
@@ -32,27 +32,18 @@ $this->renderView('/portals/partials/layouts/header', $data);
                     </header>
                     <div class="card-body">
 
-                        <table id="courseTable" class="table table-bordered">
+                        <table id="activityTable" class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Title</th>
-                                    <th>Advisers</th>
+                                    <th>Activity name</th>
+                                    <th>Date created</th>
+                                    <th>Date updated</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($sections as $index => $section) : ?>
-                                    <tr>
-                                        <td><?= $section['sectionID'] ?></td>
-                                        <td><?= $section['sectionName'] ?></td>
-                                        <td><?= $section['teacherName'] ?? 'Unassigned' ?></td>
-                                        <td>
-                                            <button type="button" class="btn btn-sm bg-teal editSectionBtn" data-section-id="<?= $section['sectionID'] ?>">Edit</button>
-                                            <button type="button" class="btn btn-sm bg-red">Remove</button>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
+
 
                             </tbody>
                         </table>
@@ -73,5 +64,5 @@ include 'components/section-modal.php';
 ?>
 
 <script>
-    $('#courseTable').DataTable();
+    $('#activityTable').DataTable();
 </script>

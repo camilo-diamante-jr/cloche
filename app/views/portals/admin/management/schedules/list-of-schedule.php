@@ -30,15 +30,13 @@ $startTime = min(array_column($schedules, 'time'));
                 <div class="card elevation-4">
                     <header class="card-header bg-white">
                         <div class="d-flex align-items-center justify-content-between">
-                            <h5 class="mb-0">Scheduled Activities</h5>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-dark">Export</button>
-                                <button type="button" class="btn btn-sm btn-primary" id="addSectionBtn">
-                                    <i class="fa fa-plus me-1"></i>Create
-                                </button>
-                                <button type="button" class="btn btn-sm btn-success">Import</button>
-
+                            <h5 class="mb-0">List of Bell Schedules</h5>
+                            <div class="d-flex justify-content-end mb-3 gap-2">
+                                <button class="btn btn-success btn-sm"><i class="fas fa-download"></i> Export</button>
+                                <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Create</button>
+                                <button class="btn btn-warning btn-sm"><i class="fas fa-upload"></i> Import</button>
                             </div>
+
                         </div>
                     </header>
                     <div class="card-body">
@@ -66,10 +64,11 @@ $startTime = min(array_column($schedules, 'time'));
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                        <small class="text-muted mt-3 d-block">
-                            <em>Note: Schedule durations are set in seconds.<br>
-                                Time format follows the 24-hour format. The system rings automatically based on the scheduled time.</em>
+                        <small class="text-muted d-block mt-3">
+                            <em>Note: Schedule durations are set in seconds. Time format follows the 24-hour format.</em><br>
+                            <em>The system rings automatically based on the scheduled time.</em>
                         </small>
+
 
 
                     </div>
