@@ -24,5 +24,4 @@ function databaseConnection()
     }
 }
 
-// Return the PDO connection
 return databaseConnection();

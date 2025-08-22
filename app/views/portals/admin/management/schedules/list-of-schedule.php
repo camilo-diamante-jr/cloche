@@ -1,8 +1,9 @@
 <?php
 $this->renderView('/portals/partials/layouts/header', $data);
 
-
 $startTime = min(array_column($schedules, 'time'));
+
+$this->renderView('/portals/admin/management/schedules/modals/list-of-schedule-modal');
 
 
 ?>
@@ -33,7 +34,7 @@ $startTime = min(array_column($schedules, 'time'));
                             <h5 class="mb-0">List of Bell Schedules</h5>
                             <div class="d-flex justify-content-end mb-3 gap-2">
                                 <button class="btn btn-success btn-sm"><i class="fas fa-download"></i> Export</button>
-                                <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Create</button>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createBellScheduleModal"><i class="fas fa-plus"></i> Create</button>
                                 <button class="btn btn-warning btn-sm"><i class="fas fa-upload"></i> Import</button>
                             </div>
 
@@ -78,4 +79,6 @@ $startTime = min(array_column($schedules, 'time'));
     </div>
 </div>
 
-<?php $this->renderView('/portals/partials/layouts/footer'); ?>
+<?php
+$this->renderView('/portals/partials/layouts/footer');
+?>
